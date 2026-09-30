@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EduGenie - AI powered learning assistant" />
+  <title>EduGenie | AI Learning Assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand">
+        <span class="brand-mark">E</span>
+        <div>
+          <h1>EduGenie</h1>
+          <p>AI-powered learning assistant</p>
+        </div>
+      </div>
+      <div class="status"><span></span> Ready to learn</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <div>
+        <p class="eyebrow">LEARN • PRACTICE • UNDERSTAND</p>
+        <h2>Your personal study companion.</h2>
+        <p>
+          Ask questions, simplify difficult concepts, summarize study material,
+          generate quizzes, or build a learning path.
+        </p>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <div class="card controls-card">
+        <label for="task">What would you like to do?</label>
+        <select id="task">
+          <option value="qa">Ask a Question</option>
+          <option value="explain">Explain a Concept</option>
+          <option value="quiz">Generate Quiz</option>
+          <option value="summarize">Summarize Text</option>
+          <option value="learn">Recommend Learning Path</option>
+        </select>
+
+        <div id="level-wrap" class="hidden">
+          <label for="level">Your current level</label>
+          <select id="level">
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+          </select>
+        </div>
+
+        <label for="input">Your input</label>
+        <textarea
+          id="input"
+          rows="9"
+          placeholder="For example: Explain the Pythagoras theorem in simple terms."
+        ></textarea>
+
+        <div class="actions">
+          <button id="submit-btn" class="primary">Generate Answer</button>
+          <button id="clear-btn" class="secondary">Clear</button>
+        </div>
+
+        <p id="error" class="error hidden"></p>
+      </div>
+
+      <div class="card result-card">
+        <div class="result-heading">
+          <div>
+            <p class="eyebrow">RESULT</p>
+            <h3 id="result-title">Your answer will appear here</h3>
+          </div>
+          <div id="loader" class="loader hidden"></div>
+        </div>
+
+        <div id="result" class="result empty">
+          <div class="empty-icon">✦</div>
+          <p>Choose a task and send your request.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <article><strong>Q&A</strong><span>Clear answers to academic questions.</span></article>
+      <article><strong>Explain</strong><span>Break complex concepts into simple ideas.</span></article>
+      <article><strong>Quiz</strong><span>Practice with automatically generated questions.</span></article>
+      <article><strong>Summarize</strong><span>Turn long passages into revision notes.</span></article>
+      <article><strong>Learn</strong><span>Build a progressive learning path.</span></article>
+    </section>
+  </main>
+
+  <footer>
+    EduGenie · FastAPI + Google Gemini · Educational use
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
